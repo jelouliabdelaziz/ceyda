@@ -1,33 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy 23rd Birthday Ceyda 🎂</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    background:linear-gradient(-45deg,#ff6ec4,#7873f5,#ffb347,#ff4d6d);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    overflow-x:hidden;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+h1{
+    font-size:4rem;
+    text-shadow:0 0 20px white;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+.card{
+    margin-top:30px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    transform-style:preserve-3d;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:rotateX(5deg) rotateY(-5deg);
+}
+
+.monkey{
+    font-size:100px;
+}
+
+.cake{
+    font-size:90px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(-15px);}
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:white;
+    color:#ff4d6d;
+    font-size:1rem;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+#surprise{
+    display:none;
+    margin-top:20px;
+    font-size:1.3rem;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:280px;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+.balloon{
+    position:fixed;
+    bottom:-150px;
+    font-size:50px;
+    animation:rise linear infinite;
+}
+
+@keyframes rise{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎉 HAPPY 23rd BIRTHDAY CEYDA 🎉</h1>
+
 <div class="card">
-    <pre style="font-size:14px; line-height:1.1;">
-   .-"-. 
-  / .-. \
-  | | '| |
-  | \_/ |
-   \   /
-  .-`-'-.
- /  BANANA \
-|  PARTY!!  |
- \         /
-  `-.___.-'
+    <div class="monkey">🐵</div>
 
-      🐵
-    </pre>
+    <h2>Official Birthday Monkey Announcement</h2>
 
-    <h2>Special Message for Ceyda 🎉</h2>
-
-    <p>
-        This highly trained birthday monkey has traveled across
-        jungles, mountains, and suspiciously expensive coffee shops
-        to deliver one message:
+    <p style="margin-top:15px">
+        Attention everyone!
+        The Birthday Monkey News Network has confirmed that
+        Ceyda has reached Level 23.
     </p>
 
-    <h1>🎂 HAPPY 23rd BIRTHDAY, CEYDA! 🎂</h1>
+    <br>
+
+    <div class="cake">🎂</div>
 
     <p>
-        May your snacks be plentiful,
-        your alarms be ignored,
-        and your birthday cake be larger
-        than your responsibilities.
+        Rewards unlocked:
+        <br>✅ +100 Happiness
+        <br>✅ +500 Birthday Energy
+        <br>✅ Unlimited Cake Access
+        <br>✅ Temporary Immunity From Responsibilities
     </p>
+
+    <button onclick="showSurprise()">
+        Open Secret Birthday Message 🎁
+    </button>
+
+    <div id="surprise">
+        🚨 CONFIDENTIAL 🚨
+        <br><br>
+        Dear Ceyda,
+        <br>
+        Have an amazing birthday filled with laughter,
+        great memories, and all your favorite things.
+        You deserve a fantastic year ahead.
+        🎉💖
+    </div>
 </div>
+
+<div class="card">
+    <h2>📸 Birthday Gallery</h2>
+
+    <p>Replace these pictures with your own if you want.</p>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800">
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800">
+        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800">
+    </div>
+</div>
+
+<div class="card">
+    <h2>🎵 Birthday Song</h2>
+
+    <p>Click below to play a birthday song.</p>
+
+    <a href="https://www.youtube.com/results?search_query=happy+birthday+song"
+       target="_blank">
+        <button>▶ Play Birthday Song</button>
+    </a>
+</div>
+
+</div>
+
+<script>
+function showSurprise(){
+    document.getElementById("surprise").style.display="block";
+}
+
+for(let i=0;i<25;i++){
+    let b=document.createElement("div");
+    b.className="balloon";
+    b.innerHTML=["🎈","🎉","✨"][Math.floor(Math.random()*3)];
+    b.style.left=Math.random()*100+"vw";
+    b.style.animationDuration=(8+Math.random()*10)+"s";
+    document.body.appendChild(b);
+}
+</script>
+
+</body>
+</html>
